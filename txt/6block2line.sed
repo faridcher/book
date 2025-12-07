@@ -5,12 +5,17 @@
 # if not an empty line
 /^$/!{
   :x N
-  # $a \n
+  # debug
+  # $=
+  # appends two lines and \n$ won't match later
+   # $a
+  # append and empty line at EOL
+  $s/$/\n/
   # if found an empty line
   /\n$/{
     # join lines. the leading and last \n replaced as well
     s/\n/ /g
-    # dehyphenate
+    # dehyphenate; not on farsi
     s/([[:alpha:]])- /\1/g
     # append newline (all newlines replaced by space above)
     s/ $/\n/g
