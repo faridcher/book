@@ -1,1 +1,1 @@
-A series of scripts to convert a text of a PDF document to a LaTeX Beamer presentation.
+A series of awk/sed/vim scripts to process a books' text and to produce various output formats including a LaTeX Beamer presentation.
